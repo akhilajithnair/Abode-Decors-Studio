@@ -1,24 +1,25 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PartnersComponent } from './partners/partners.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+
+
+import { PagesModule } from './pages/pages.module';
+import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
-    PartnersComponent,
-    ContactUsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,
+    WidgetsModule
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
