@@ -1,1 +1,8 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  .page-layout {
+    height: 100vh;
+    background-color: black;
+  }
+}
